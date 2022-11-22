@@ -1,0 +1,32 @@
+<html>
+  <head>
+     <title></title>
+     <meta charset="utf-8"/>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="Canvas.css" type="text/css" rel="stylesheet">
+  </head>
+
+  <body>
+    <section>
+      <canvas id="myCanvas">No Canvas for you!</canvas>
+      <div class="wrapper">
+        	<button id="two">one</button>
+          <button id="one">new</button>
+
+        </div>
+
+        <!-- Filter: https://css-tricks.com/gooey-effect/ -->
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                  <feBlend in2="goo" in="SourceGraphic"/>
+              </filter>
+            </defs>
+        </svg>
+    </section>
+    <script type="text/javascript" src="Canvas.js"></script>
+  </body>
+</html>

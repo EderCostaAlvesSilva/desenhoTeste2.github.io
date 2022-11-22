@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+:root {
+  --bg: #2C3E50;
+	--bbg: #401f58;
+  --font: "Questrial";
+  --font-size: 1.5em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+    background:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 25%,
+      #c55f30 0,
+      #ff9683 50%
+    ),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 25%,
+      #6a99ff 0,
+      #bedfff 50%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 25%,
+      #ff9191 0,
+      #a563ef 50%
+    ), rgba(83, 253, 221, 0.79);
+  background-blend-mode: saturation;
+  background-size: 10em 10em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+}
+
+#myCanvas {
+  /*
+  border: 0.5em solid #6DBCDB;*/
+  box-shadow: 0px 10px 0px -5px rgba(0,0,0,0.75);
+  background-color: #F5F9FA;
+  cursor: pointer;
+  margin-top: 2vh;
+}
+
+.wrapper {
+  filter: url("#goo");
+	width: 100vw;
+	height: 100%;
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+button {
+  border-radius: 50%;
+  border-style: none;
+  height: 3em;
+  width: 3em;
+  background-color: var(--bbg);
+  position: absolute;
+  text-align: center;
+  font-size: var(--font-size);
+  font-family: var(--font);
+  color: white;
+  cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+.left {
+		animation: blob-left ease 2s;
+}
+
+.right {
+		animation: blob-right ease 2s;
+
+}
+
+
+@keyframes blob-left {
+	0% {
+		transform: translate(0,0);
+	}
+	33% {
+		transform: translate(-30px,0);
+	}
+	98% {
+		transform: translate(0,0);
+	}
+}
+
+@keyframes blob-right {
+	0% {
+		transform: translate(0,0);
+	}
+	33% {
+		transform: translate(30px,0);
+	}
+	98% {
+		transform: translate(0,0);
+	}
+}
